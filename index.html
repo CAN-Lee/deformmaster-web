@@ -140,11 +140,11 @@
                     </p>
                     <p>
                         We present <strong>DeformMaster</strong>, a video-derived interactive
-                        physics&ndash;neural world model that turns real interaction videos into an online
+                        physics-neural world model that turns real interaction videos into an online
                         interactive model of deformable objects within a unified
                         dynamics-and-appearance framework. DeformMaster preserves structured physical
                         rollout while using a neural residual to compensate for unmodeled effects, grounds
-                        sparse hand motion as distributed compliant actuators for hand&ndash;continuum
+                        sparse hand motion as distributed compliant actuators for hand-continuum
                         interaction, represents material response with spatially varying constitutive
                         experts, and drives high-fidelity 4D appearance from the predicted physical
                         evolution. Experiments on real-world deformable-object sequences demonstrate
@@ -170,12 +170,12 @@
                 <div class="content has-text-justified">
                     <p>
                         DeformMaster learns a deformable-object world model from interaction videos by
-                        coupling interactive physics&ndash;neural dynamics with physics-grounded appearance.
-                        It integrates four components for stable dynamics rollout, robust hand&ndash;continuum
+                        coupling interactive physics-neural dynamics with physics-grounded appearance.
+                        It integrates four components for stable dynamics rollout, robust hand-continuum
                         interaction, heterogeneous material response, and high-fidelity rendering:
                     </p>
                     <ul>
-                        <li><strong>Physics&ndash;Neural Particle-Grid Dynamics (PNPGD).</strong>
+                        <li><strong>Physics-Neural Particle-Grid Dynamics (PNPGD).</strong>
                             A differentiable MPM block advances the material-particle state over each
                             frame, while a particle-grid neural residual estimates a residual velocity field
                             from the post-MPM state and short motion history. This keeps rollout
@@ -184,7 +184,7 @@
                             Vision-derived hand tracks are treated as compliant actuator anchors rather
                             than hard point constraints. Local actuator-particle couplings damp tracking
                             noise and distribute forces over contact patches, yielding robust
-                            hand&ndash;continuum interaction.</li>
+                            hand-continuum interaction.</li>
                         <li><strong>Mixture of Constitutive Experts (MoCE).</strong>
                             The stress response is represented as a spatially varying mixture of named
                             constitutive laws, including Neo-Hookean, Corotated, and StVK experts. Patch
