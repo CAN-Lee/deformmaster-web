@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="data:,">
+    <link rel="icon" type="image/svg+xml" href="static/images/logo.svg?v=dm">
+    <meta name="theme-color" content="#7763b4">
     <title>DeformMaster: An Interactive Physics-Neural World Model for Deformable Objects from Videos</title>
     <meta name="description" content="DeformMaster turns a phone-captured monocular video of deformable objects into an online interactive physics-neural world model.">
     <link rel="canonical" href="https://can-lee.github.io/deformmaster-web/">
@@ -22,13 +23,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://jpswalsh.github.io/academicons/css/academicons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans">
     <link rel="stylesheet" href="static/css/index.css">
 </head>
-<body>
+<body id="top">
+<header class="site-header">
+    <div class="site-nav">
+        <a class="site-wordmark" href="#top" aria-label="DeformMaster home">Deform<span>Master</span></a>
+        <nav aria-label="Page navigation">
+            <a href="#interaction">Interaction</a>
+            <a href="#abstract">Abstract</a>
+            <a href="#method">Method</a>
+            <a href="#results">Results</a>
+            <a href="#bibtex">BibTeX</a>
+        </nav>
+    </div>
+</header>
 
 <!-- ============================== HERO ============================== -->
-<section class="hero" style="padding-bottom: 0;">
+<section class="hero publication-header">
     <div class="hero-body" style="padding-bottom: 0;">
         <div class="container is-max-desktop">
             <div class="columns is-centered">
@@ -101,12 +113,12 @@
 </section>
 
 <!-- ============================== TEASER ============================== -->
-<section class="hero teaser" style="padding-top: 0;">
+<section class="hero teaser">
     <div class="container is-max-desktop">
         <div class="hero-body" style="padding-top: 0;">
             <figure class="method-figure">
                 <img src="static/images/teaser_web.jpg" alt="DeformMaster teaser"
-                     style="max-width: 100%; height: auto; border-radius: 6px;">
+                     style="max-width: 100%; height: auto; ">
             </figure>
             <h2 class="subtitle has-text-justified">
                 <strong>DeformMaster</strong> turns a phone-captured monocular video of deformable objects
@@ -114,16 +126,16 @@
                 high-fidelity appearance, it supports long-horizon rollouts under novel actions,
                 material-parameter variation, and novel-view synthesis.
             </h2>
-            <h2 class="title is-3 has-text-centered" style="margin-top: 2rem;">Online Interaction</h2>
+            <h2 class="title is-3 has-text-centered" id="interaction" style="margin-top: 2rem;">Online Interaction</h2>
             <figure class="method-figure" style="margin-top: 1rem;">
                 <video src="static/videos/arxiv_web.mp4" autoplay muted controls loop playsinline preload="metadata"
-                       style="max-width: 100%; height: auto; border-radius: 6px;">
+                       style="max-width: 100%; height: auto; ">
                     Your browser does not support HTML5 video.
                 </video>
             </figure>
             <figure class="method-figure" style="margin-top: 1rem;">
                 <video src="static/videos/video_cloth.mp4" autoplay muted controls loop playsinline preload="metadata"
-                       style="width: 50%; max-width: 100%; height: auto; border-radius: 6px;">
+                       class="cloth-video" style="max-width: 100%; height: auto;">
                     Your browser does not support HTML5 video.
                 </video>
             </figure>
@@ -134,10 +146,10 @@
             </p>
             <div class="columns is-multiline is-mobile is-variable is-3">
                 <div class="column is-half-tablet is-full-mobile">
-                    <video src="static/videos/rope_video.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                    <video src="static/videos/rope_video.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 </div>
                 <div class="column is-half-tablet is-full-mobile">
-                    <video src="static/videos/sloth_video.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                    <video src="static/videos/sloth_video.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 </div>
             </div>
 
@@ -149,7 +161,7 @@
 </section>
 
 <!-- ============================== ABSTRACT ============================== -->
-<section class="section">
+<section class="section abstract-section soft-section" id="abstract">
     <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
             <div class="column is-four-fifths">
@@ -185,7 +197,7 @@
 </section>
 
 <!-- ============================== METHOD ============================== -->
-<section class="section">
+<section class="section method-section" id="method">
     <div class="container is-max-desktop">
         <div class="columns is-centered">
             <div class="column is-full">
@@ -229,7 +241,7 @@
 </section>
 
 <!-- ============================== RESULTS ============================== -->
-<section class="section">
+<section class="section results-section soft-section" id="results">
     <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Results</h2>
         <div class="content has-text-justified">
@@ -249,85 +261,85 @@
         <p class="has-text-justified has-text-grey-dark" style="margin-bottom: 1rem;">
             Action-conditioned rollouts of DeformMaster on the deformable objects (from <a href="https://jianghanxiao.github.io/phystwin-web/" target="_blank" rel="noopener">PhysTwin</a>). Foreground: prediction; background: ground truth.
         </p>
-        <div class="columns is-multiline is-mobile is-variable is-2">
+        <div class="columns is-multiline is-mobile is-variable is-2 results-grid">
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/double_lift_cloth_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_lift_cloth_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_cloth_1</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/double_lift_cloth_3_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_lift_cloth_3_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_cloth_3</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/double_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_sloth</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/double_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_zebra</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/double_stretch_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_stretch_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_stretch_sloth</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/double_stretch_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_stretch_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_stretch_zebra</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_clift_cloth_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_clift_cloth_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_clift_cloth_1</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_clift_cloth_3_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_clift_cloth_3_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_clift_cloth_3</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_cloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_cloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_cloth</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_cloth_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_cloth_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_cloth_1</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_cloth_3_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_cloth_3_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_cloth_3</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_cloth_4_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_cloth_4_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_cloth_4</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_dinosor_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_dinosor_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_dinosor</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_rope_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_rope_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_rope</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_sloth</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_lift_zebra</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_push_rope_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_push_rope_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_push_rope</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_push_rope_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_push_rope_1_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_push_rope_1</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/single_push_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/single_push_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">single_push_sloth</p>
             </div>
             <div class="column is-one-quarter-tablet is-half-mobile">
-                <video src="static/videos/results/weird_package_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/weird_package_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">weird_package</p>
             </div>
         </div>
@@ -342,19 +354,19 @@
         </div>
         <div class="columns is-multiline is-mobile is-variable is-3">
             <div class="column is-half">
-                <video src="static/videos/baselines/double_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/baselines/double_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_zebra</p>
             </div>
             <div class="column is-half">
-                <video src="static/videos/results/double_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_lift_zebra_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_zebra</p>
             </div>
             <div class="column is-half">
-                <video src="static/videos/baselines/double_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/baselines/double_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_sloth</p>
             </div>
             <div class="column is-half">
-                <video src="static/videos/results/double_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; border-radius: 4px;"></video>
+                <video src="static/videos/results/double_lift_sloth_view0_bg_alpha06_white.mp4" autoplay muted loop playsinline preload="metadata" style="width: 100%; "></video>
                 <p class="has-text-centered is-size-7" style="margin-top: 0.25rem;">double_lift_sloth</p>
             </div>
         </div>
@@ -365,7 +377,7 @@
             <em>linear</em>, <em>planar</em>, and <em>volumetric</em> objects.
         </p>
         <div class="table-container" style="overflow-x: auto;">
-            <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth has-text-centered">
+            <table class="table metrics-table is-fullwidth has-text-centered">
                 <thead>
                     <tr>
                         <th rowspan="2" class="has-text-centered">Method</th>
@@ -425,7 +437,7 @@
 </section>
 
 <!-- ============================== BIBTEX ============================== -->
-<section class="section bibtex-block" id="bibtex">
+<section class="section bibtex-block soft-section" id="bibtex">
     <div class="container is-max-desktop">
         <h2 class="title is-3">BibTeX</h2>
         <pre><code>@article{li2026deformmaster,
