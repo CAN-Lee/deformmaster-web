@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
     <link rel="stylesheet" href="https://jpswalsh.github.io/academicons/css/academicons.min.css">
-    <link rel="stylesheet" href="static/css/index.css?v=20260916-dm">
+    <link rel="stylesheet" href="static/css/index.css?v=20260924-demo-input">
 </head>
 <body id="top">
 <header class="site-header">
@@ -65,11 +65,11 @@
                         <span class="author-block"><sup>2</sup>Zhejiang University&nbsp;&nbsp;</span>
                         <span class="author-block"><sup>3</sup>Southern University of Science and Technology</span>
                         <br>
-                        <span class="author-block"><sup>4</sup><a href="https://www.a4x.io/" target="_blank" rel="noopener">Rightly Robotics, A4X</a>&nbsp;&nbsp;</span>
+                        <span class="author-block"><sup>4</sup><a href="https://www.a4x.io/" target="_blank" rel="noopener">Rightly Robotics, A4x</a>&nbsp;&nbsp;</span>
                         <span class="author-block"><sup>5</sup>University of Science and Technology of China</span>
                     </div>
                     <div class="is-size-7 publication-authors" style="margin-top: 0.4em;">
-                        <span class="author-block"><sup>*</sup>Interned at <a href="https://www.a4x.io/" target="_blank" rel="noopener">Rightly Robotics, A4X</a>.</span>
+                        <span class="author-block"><sup>*</sup>Interned at <a href="https://www.a4x.io/" target="_blank" rel="noopener">Rightly Robotics, A4x</a>.</span>
                     </div>
 
                     <div class="column has-text-centered">
@@ -120,19 +120,31 @@
                 <img src="static/images/teaser_web.jpg" alt="DeformMaster teaser"
                      style="max-width: 100%; height: auto; ">
             </figure>
-            <h2 class="subtitle has-text-justified">
+            <h2 class="subtitle teaser-description">
                 <strong>DeformMaster</strong> turns a phone-captured monocular video of deformable objects
                 into an online interactive world model. By recovering both underlying physics and
                 high-fidelity appearance, it supports long-horizon rollouts under novel actions,
                 material-parameter variation, and novel-view synthesis.
             </h2>
             <h2 class="title is-3 has-text-centered" id="interaction" style="margin-top: 2rem;">Online Interaction</h2>
+            <h3 class="title is-5 has-text-centered">Demo 1</h3>
+            <figure class="method-figure interaction-input">
+                <figcaption id="demo1-input-label">Input: Real-world monocular video</figcaption>
+                <video src="static/videos/demo1_input.mp4" muted controls playsinline preload="metadata"
+                       aria-labelledby="demo1-input-label">
+                    Your browser does not support HTML5 video.
+                </video>
+            </figure>
+            <p class="interaction-learning-note">Learned from the real-world video above.</p>
             <figure class="method-figure" style="margin-top: 1rem;">
+                <figcaption class="interaction-output-label" id="demo1-output-label">Output: Learned interactive world model</figcaption>
                 <video src="static/videos/arxiv_web.mp4" autoplay muted controls loop playsinline preload="metadata"
+                       aria-labelledby="demo1-output-label"
                        style="max-width: 100%; height: auto; ">
                     Your browser does not support HTML5 video.
                 </video>
             </figure>
+            <h3 class="title is-5 has-text-centered" style="margin-top: 2.5rem;">Demo 2</h3>
             <figure class="method-figure" style="margin-top: 1rem;">
                 <video src="static/videos/video_cloth.mp4" autoplay muted controls loop playsinline preload="metadata"
                        class="cloth-video" style="max-width: 100%; height: auto;">
@@ -427,7 +439,7 @@
         <h2 class="title is-3">Acknowledgment</h2>
         <p>
             This work was done during an internship at
-            <a href="https://www.a4x.io/" target="_blank" rel="noopener">Rightly Robotics, A4X</a>.
+            <a href="https://www.a4x.io/" target="_blank" rel="noopener">Rightly Robotics, A4x</a>.
             We thank the authors of
             <a href="https://jianghanxiao.github.io/phystwin-web/" target="_blank" rel="noopener">PhysTwin</a>,
             <a href="https://kywind.github.io/pgnd" target="_blank" rel="noopener">PGND</a>, and

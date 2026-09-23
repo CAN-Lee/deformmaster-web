@@ -75,6 +75,11 @@ strong, .title, .subtitle { color: var(--ink); }
 .cloth-video { width: 56%; }
 video { display: block; max-width: 100%; background: #f1f2f5; border-radius: 12px; }
 .teaser .subtitle { max-width: 900px; margin: 24px auto 48px; font-size: 18px; line-height: 1.75; }
+.teaser .teaser-description { max-width: none; width: 100%; text-align: justify; }
+.interaction-input { width: 40%; margin: 20px auto 0; }
+.interaction-input video { width: 100%; height: auto; }
+.interaction-input figcaption, .interaction-output-label { margin-bottom: 10px; color: var(--ink); font-size: 15px; font-weight: 600; }
+.interaction-learning-note { margin: 18px 0 0; text-align: center; color: var(--muted); font-size: 15px; }
 .title.is-3 { font-family: var(--font); font-size: clamp(27px, 3.5vw, 38px); font-weight: 700; line-height: 1.25; letter-spacing: -.035em; margin-bottom: 24px; }
 .title.is-5 { font-size: 21px; font-weight: 650; line-height: 1.4; letter-spacing: -.02em; margin-bottom: 16px; }
 /* Left-aligned body copy keeps word spacing even at every viewport width. */
@@ -121,6 +126,7 @@ footer { padding: 32px 20px; text-align: center; color: var(--muted); font-size:
     .publication-links .button { font-size: 13px; padding: 8px 13px; }
     .teaser .subtitle { font-size: 16px; margin-bottom: 32px; }
     .cloth-video { width: 100%; }
+    .interaction-input { width: 100%; }
     .method-section .content ul { grid-template-columns: 1fr; }
     .method-section .content li { padding: 20px; }
     .title.is-5 { font-size: 19px; }
