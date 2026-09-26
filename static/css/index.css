@@ -43,6 +43,18 @@ strong, .title, .subtitle { color: var(--ink); }
     letter-spacing: -.025em;
     text-wrap: balance;
 }
+.publication-venue {
+    display: inline-block;
+    margin: 0 0 22px;
+    padding: 6px 18px;
+    border: 1px solid #ddd5ed;
+    border-radius: 999px;
+    background: #f4f2f9;
+    color: #66529c;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+}
 .publication-authors { font-family: var(--font); line-height: 1.9; }
 .publication-authors.is-size-5 { font-size: 18px !important; margin-bottom: 8px; }
 .publication-authors.is-size-6 { font-size: 15px !important; color: var(--muted); }
