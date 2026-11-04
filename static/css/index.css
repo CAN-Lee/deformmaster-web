@@ -56,6 +56,7 @@ strong, .title, .subtitle { color: var(--ink); }
     line-height: 1.5;
 }
 .publication-authors { font-family: var(--font); line-height: 1.9; }
+.publication-authors a { color: inherit; }
 .publication-authors.is-size-5 { font-size: 18px !important; margin-bottom: 8px; }
 .publication-authors.is-size-6 { font-size: 15px !important; color: var(--muted); }
 .publication-authors.is-size-7 { color: var(--muted); }
