@@ -78,8 +78,6 @@ strong, .title, .subtitle { color: var(--ink); }
     transition: background-color .15s, border-color .15s;
 }
 .publication-links .button:hover { background: #f0edf7; border-color: #b7a9d7; }
-.publication-links .link-block:first-child .button { background: var(--ink); border-color: var(--ink); color: white; }
-.publication-links .link-block:first-child .button:hover { background: #49546b; }
 .teaser > .container { max-width: 1152px; }
 .teaser .hero-body > .method-figure:first-child { margin-top: 0; }
 .method-figure { text-align: center; margin: 28px 0; }
